@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 폼</title>
+    <style>
+        form fieldset {
+            margin: 10px 0;
+        }
+        form legend {
+            font-size: 18px;
+            color: purple;
+            font-weight: 600;
+        }
+        form label.reg {
+            font-size: 14px;
+            width: 120px;
+            float: left;
+        }
+      
+        form ul li {
+            list-style: none;
+            margin: 10px 0;
+        }
+       
+        form fieldset.sendform {
+            text-align: center;
+        }
+		/* input{
+			text-align: center;
+		} */
+		div {
+			text-align: center;
+		}
+    </style>
+</head>
+<body>
+    <!--zencoding class속성 추가할 때 .으로 표시-->
+    <!--form>((fieldset.login>(legend+(label+input)*2)+input)+(fieldset.register>(legend+(ul>(li>(label.reg+input))*6)))+(fieldset.goodprogrammers>(legend+textarea))+(fieldset.sendform>input*2))-->
+    <form action="">
+        <fieldset class="login">
+            <legend>개인정보</legend>
+		<ul>
+			<li>
+				<label class="reg" for="r-name"><b>이름</b></label>
+				<input type="r-name" id="r-name"placeholder="여백없이 입력" size="20" autocomplete="on" required>
+			</li>
+			<li>
+				<label class="reg" for="new_pw1"><b>연락처</b></label>
+				<input type="password" id="new_pw1" size="20" required placeholder="연락가능한 번호">
+        </fieldset>
+			</li>
+	    </ul>
+        <fieldset class="register">
+            <legend>배송지정보</legend>
+            <ul>
+                <li>
+                    <label class="reg" for="new_id"><b>주소</b></label>
+                    <input type="text" id="new_id" size="40" autocomplete="on" required>
+                </li>
+                <li>
+                    <label class="reg" for="new_pw1"><b>전화번호</b></label>
+                    <input type="password" id="new_pw1" size="20" required>
+                </li>
+                <li>
+                    <label class="reg" for="new_pw2"><b>메모</b></label>
+                    <textarea name="intro" cols="30" rows="3">
+						
+									</textarea>
+                </li>
+               
+            </ul>
+        </fieldset>
+        <fieldset class="goodprogrammers">
+            <legend>주문 정보</legend>
+				
+				<ul>
+				<li>
+					<label for="">
+					<input type="checkbox" name="mailing1" value="news">과테말라 안티구아(100g)</label>
+					<input type="number"value="0" min="0"max="10">개
+				</li>
+				<li><label for="">
+					<input type="checkbox" name="mailing2" value="dialog">인도네시아 만델링(100g)</label>
+					<input type="number"value="0"min="0"max="10">개
+				</li>
+				<li><label for="">
+					<input type="checkbox" name="mailing3" value="pops">탐나는도다(블렌딩)(100g)</label>
+					<input type="number"value="0"min="0"max="10">개
+				</li></ul>
+			</fieldset>
+        
+			<div>
+            <input type="submit"id="input"value="가입하기">
+            <input type="reset" id="input" value="다시쓰기">
+        	</div>
+    </form>
+</body>
+</html>

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>label 태그 사용</title>
     <style>
-        ul{
+        ul {
             list-style: none;
         }
-        li{
+        li {
             margin: 20px;
         }
         li label {
@@ -22,23 +22,23 @@
     </style>
 </head>
 <body>
-   <!-- form>(ul>((li>label+input)*2(li>input)))-->
-   <form action="longi.php"method="POST">
-       <ul>
-           <li>
-               <!--label : input에 텍스트 붙이는 태그-->
-               <!--for속성 : input의 id속성과 매핑-->
-               <label for="id">아이디</label>
-               <input id="id" type="text">
+    <!--form>(ul>((li>label+input)*2+(li>input)))-->
+    <form action="login.php" method="POST">
+        <ul>
+            <li>
+                <!--label : input에 텍스트 붙이는 태그-->
+                <!--for속성 : input의 id속성과 매핑-->
+                <label for="id">아이디</label>
+                <input id="id" type="text">
             </li>
-           <li><label for="pw">비밀번호</label>
-            <input type="password"id="pw">
-        </li>
-           <li>
-               <input type="submit"title="로그인">
+            <li>
+                <label for="pw">비밀번호</label>
+                <input type="password" id="pw">
             </li>
-       </ul>
-   </form>
-    
+            <li>
+                <input type="submit" title="로그인" value="로그인">
+            </li>
+        </ul>
+    </form>
 </body>
 </html>
